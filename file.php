@@ -20,6 +20,9 @@ class File
     {
         $filename = $this->_dir . $path . $key . self::EXT;
         if ($value !== '') {  //将value写入缓存
+            if(is_null($value)){
+                return @unlink($filename);  //删除缓存
+            }
             $dir = dirname($filename);
             if (!is_dir($dir)) {
                 mkdir($dir, 0777);   //创建目录
