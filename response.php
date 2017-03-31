@@ -8,6 +8,7 @@
  */
 class Response
 {
+    const TYPE = 'json';
     /**
      * 按JSON方式输出通信数据
      * @param integer $code 状态码
@@ -96,11 +97,37 @@ class Response
      * @param string $type 数据类型
      * return string
      */
-    public static function show($code, $message, $data = array(), $type)
+    public static function show1($code, $message, $data = array(), $type)
     {
         if (!is_numeric($code)) {
             return '';
         }
+        $result = array(
+            'code' => $code,
+            'message' => $message,
+            'data' => $data
+        );
+        if ($type == 'json') {
+            self::json($code, $message, $data);
+            exit;
+        } elseif ($type == 'array') {
+            var_dump($result);
+        } elseif ($type == 'xml') {
+            self::xmlEncode($code, $message, $data);
+            exit;
+        } else {
+            // TODO
+        }
+    }
+
+
+
+    public static function show2($code, $message, $data = array(), $type=self::TYPE)
+    {
+        if (!is_numeric($code)) {
+            return '';
+        }
+        $type = isset($_GET['format']) ? $_GET['format'] : self::TYPE;
         $result = array(
             'code' => $code,
             'message' => $message,

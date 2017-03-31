@@ -15,8 +15,10 @@ $data = array(
     'test'=>array(11,22,array(44,55))
 );
 
-Response::show1(200, 'success', $data,'json');
-//Response::show1(200, 'success', $data,'xml');
-//Response::show1(200, 'success', $data,'array');    //调试模式
+
+Response::show2(200, 'success', $data);
+//对应网址：http://127.0.0.27/test5.php?format=xml
+//对应网址：http://127.0.0.27/test5.php?format=json
+//对应网址：http://127.0.0.27/test5.php?format=array
 
 
