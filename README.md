@@ -14,3 +14,7 @@ xml
 json
 {"title":"zhangsanfen","from":"beijing","description":"zhang"}
 
+按JSON方式输出通信数据（http://127.0.0.27/test1.php）
+
+按XML方式输出通信数据（http://127.0.0.27/test2.php）
+
