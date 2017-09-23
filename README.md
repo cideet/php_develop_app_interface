@@ -1,20 +1,6 @@
-# php_develop_app_interface
-php_develop_app_interface
+# PHP开发APP接口
+    来自慕课网singwa老师
+    http://www.imooc.com/learn/163
 
 
-xml
-< ?xml version="1.0" encoding="UTF-8"?>
-< item>
-    < title>zhangsanfen</title>
-    < test id="1"/>
-    < description>zhang</description>
-    < address>beijing</address>
-< /item>
-
-json
-{"title":"zhangsanfen","from":"beijing","description":"zhang"}
-
-按JSON方式输出通信数据（http://127.0.0.27/test1.php）
-
-按XML方式输出通信数据（http://127.0.0.27/test2.php）
 
