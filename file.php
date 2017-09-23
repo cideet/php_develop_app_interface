@@ -20,7 +20,7 @@ class File
     {
         $filename = $this->_dir . $path . $key . self::EXT;
         if ($value !== '') {  //将value写入缓存
-            if(is_null($value)){
+            if (is_null($value)) {
                 return @unlink($filename);  //删除缓存
             }
             $dir = dirname($filename);
@@ -29,10 +29,10 @@ class File
             }
             return file_put_contents($filename, json_encode($value));  //将$value写入缓存
         }
-        if(!is_file($filename)){
+        if (!is_file($filename)) {
             return FALSE;
-        }else{
-            return json_decode(file_get_contents($filename),true);
+        } else {
+            return json_decode(file_get_contents($filename), true);
         }
     }
 }

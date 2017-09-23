@@ -16,7 +16,7 @@ $data = array(
 );
 
 $file = new File();
-if ($file->cacheData('index_mk_che',null)) {
+if ($file->cacheData('index_mk_che', null)) {
     echo '删除缓存成功';
 } else {
     echo '删除缓存失败';

@@ -11,12 +11,12 @@ require 'response.php';
 $data = array(
     'id' => 1,
     'name' => 'zhangsanfen',
-    'score' => array(78,56,99),
-    'test'=>array(11,22,array(44,55))
+    'score' => array(78, 56, 99),
+    'test' => array(11, 22, array(44, 55))
 );
 
-Response::show1(200, 'success', $data,'json');
-//Response::show1(200, 'success', $data,'xml');
-//Response::show1(200, 'success', $data,'array');    //调试模式
+Response::show1(200, 'success', $data, 'json');
+//Response::show1(200, 'success', $data, 'xml');
+//Response::show1(200, 'success', $data, 'array');    //调试模式
 
 

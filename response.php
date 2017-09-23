@@ -9,6 +9,7 @@
 class Response
 {
     const TYPE = 'json';
+
     /**
      * 按JSON方式输出通信数据
      * @param integer $code 状态码
@@ -121,8 +122,7 @@ class Response
     }
 
 
-
-    public static function show2($code, $message, $data = array(), $type=self::TYPE)
+    public static function show2($code, $message, $data = array(), $type = self::TYPE)
     {
         if (!is_numeric($code)) {
             return '';

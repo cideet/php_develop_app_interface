@@ -12,3 +12,4 @@ $arr = array(
     'description' => 'PHP输出JSON'
 );
 echo json_encode($arr);
+
