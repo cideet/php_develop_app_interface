@@ -12,3 +12,9 @@ $arr = array(
 );
 
 echo json_encode($arr);
+$data = '张三丰';
+$newData = iconv('UTF-8', 'GBK', $data);
+echo('<br>' . $newData . '<br>');
+if (!json_encode($newData)) {
+    echo 'JSON只能是UTF-8';
+}
