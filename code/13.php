@@ -21,12 +21,17 @@ class File
     {
         $filename = $this->_dir . $path . $key . self::EXT;
         if ($value !== '') {
+            if(is_null($value)){
+                return @unlink($filename);
+            }
             $dir = dirname($filename);
             if (!is_dir($dir)) {    //如果目录不存在
                 mkdir($dir);        //创建目录
             }
             return file_put_contents($filename, json_encode($value));  //将字符串写入缓存
         }
+
+        //获取缓存
         if (!is_file($filename)) {
             return false;
         } else {
