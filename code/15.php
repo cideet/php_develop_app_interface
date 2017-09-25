@@ -8,14 +8,9 @@
 
 require('./13.php');
 
-$data = array(
-    'id' => 1,
-    'name' => 'zhangsanfeng'
-);
-
 $file = new File();
-if ($file->cacheData('mk_cache', $data)) {
-    echo('create cache sussess');
+if ($file->cacheData('mk_cache')) {
+    var_dump($file->cacheData('mk_cache'));
 } else {
     echo('create cache error');
 }

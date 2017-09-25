@@ -27,5 +27,10 @@ class File
             }
             return file_put_contents($filename, json_encode($value));  //将字符串写入缓存
         }
+        if (!is_file($filename)) {
+            return false;
+        } else {
+            return json_decode(file_get_contents($filename), true);
+        }
     }
 }
